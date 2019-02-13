@@ -17,7 +17,7 @@ const Content = styled.p`
   font-size: 1.2rem;
 `;
 
-const ExperienceTitle =styled.h1`
+const ExperienceTitle = styled.h1`
   font-size: 1.5rem;
   font-weight: 600;
 `;
@@ -64,6 +64,11 @@ const SubSectionTitle = styled.div`
   font-size: 1.5rem;
 `;
 
+const ImagesList = styled.div`
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+`;
 class App extends Component {
   render() {
     return (
@@ -100,45 +105,72 @@ class Soft extends Component {
   render() {
     return (
       <section className="section">
-      <div class="container">
-        <SectionTitle id="engineer">Software engineer</SectionTitle>
-        <SectionIntro>
-        Cupidatat amet mollit ex elit pariatur fugiat.
-        </SectionIntro>
-        <SubSectionTitle>Technologies</SubSectionTitle>
-        <SubSectionTitle>Experiences</SubSectionTitle>
-        <Experience
-          title="Test"
-          image="https://bulma.io/images/placeholders/128x128.png"
-          text="Incididunt commodo ut ex officia fugiat elit exercitation cupidatat aliqua deserunt deserunt laboris officia."
-          date="01/02/03 - 01/02/03"
-        />
-        <Experience
-          title="Test"
-          image="https://bulma.io/images/placeholders/128x128.png"
-          text="Reprehenderit laborum nostrud non aliqua excepteur."
-          date="01/02/03 - 01/02/03"
-        />
-        <Experience
-          title="Test"
-          image="https://bulma.io/images/placeholders/128x128.png"
-          text="Eiusmod dolor tempor aute pariatur culpa elit commodo."
-          date="01/02/03 - 01/02/03"
-        />
-        <Experience
-          title="Test"
-          image="https://bulma.io/images/placeholders/128x128.png"
-          text="Tempor nostrud ea laboris veniam deserunt adipisicing magna minim sint ex occaecat."
-          date="01/02/03 - 01/02/03"
-        />
-        <SubSectionTitle>Projects</SubSectionTitle>
-        <Experience
-          title="Test"
-          image="https://bulma.io/images/placeholders/128x128.png"
-          text="Tempor nostrud ea laboris veniam deserunt adipisicing magna minim sint ex occaecat."
-          date="01/02/03 - 01/02/03"
-        />
-      </div>
+        <div class="container">
+          <SectionTitle id="engineer">Software engineer</SectionTitle>
+          <SectionIntro>
+            Cupidatat amet mollit ex elit pariatur fugiat.
+          </SectionIntro>
+          <SubSectionTitle>Technologies</SubSectionTitle>
+          <ImagesList>              <img
+                src={process.env.PUBLIC_URL + "/py_logo.svg"}
+                alt="Monkey face"
+                style={{ padding: "0.5rem", width: "auto", height: "150px" }}
+              />
+              <img
+                src={process.env.PUBLIC_URL + "/C_logo.svg"}
+                alt="Monkey face"
+                style={{  padding: "0.5rem", width: "auto", height: "150px" }}
+              />
+              <img
+                src={process.env.PUBLIC_URL + "/js_logo.svg"}
+                alt="Monkey face"
+                style={{  padding: "0.5rem", width: "auto", height: "150px" }}
+              />
+              <img
+                src={process.env.PUBLIC_URL + "/linux_logo.svg"}
+                alt="Monkey face"
+                style={{  padding: "0.5rem", width: "auto", height: "150px" }}
+              />
+              <img
+                src={process.env.PUBLIC_URL + "/Matlab_Logo.png"}
+                alt="Monkey face"
+                style={{  padding: "0.5rem", width: "auto", height: "150px" }}
+              />
+              </ImagesList>
+
+          <SubSectionTitle>Experiences</SubSectionTitle>
+          <Experience
+            title="Test"
+            image="https://bulma.io/images/placeholders/128x128.png"
+            text="Incididunt commodo ut ex officia fugiat elit exercitation cupidatat aliqua deserunt deserunt laboris officia."
+            date="01/02/03 - 01/02/03"
+          />
+          <Experience
+            title="Test"
+            image="https://bulma.io/images/placeholders/128x128.png"
+            text="Reprehenderit laborum nostrud non aliqua excepteur."
+            date="01/02/03 - 01/02/03"
+          />
+          <Experience
+            title="Test"
+            image="https://bulma.io/images/placeholders/128x128.png"
+            text="Eiusmod dolor tempor aute pariatur culpa elit commodo."
+            date="01/02/03 - 01/02/03"
+          />
+          <Experience
+            title="Test"
+            image="https://bulma.io/images/placeholders/128x128.png"
+            text="Tempor nostrud ea laboris veniam deserunt adipisicing magna minim sint ex occaecat."
+            date="01/02/03 - 01/02/03"
+          />
+          <SubSectionTitle>Projects</SubSectionTitle>
+          <Experience
+            title="Test"
+            image="https://bulma.io/images/placeholders/128x128.png"
+            text="Tempor nostrud ea laboris veniam deserunt adipisicing magna minim sint ex occaecat."
+            date="01/02/03 - 01/02/03"
+          />
+        </div>
       </section>
     );
   }
@@ -147,7 +179,6 @@ class Soft extends Component {
 class Experience extends Component {
   render() {
     return (
-      
       <div className="columns">
         <div className="column is-narrow ">
           <figure class="image is-128x128">
@@ -155,7 +186,9 @@ class Experience extends Component {
           </figure>
         </div>
         <div className="column">
-          <ExperienceTitle className="has-text-primary">{this.props.title}</ExperienceTitle>
+          <ExperienceTitle className="has-text-primary">
+            {this.props.title}
+          </ExperienceTitle>
           <Date>{this.props.date}</Date>
           <Content>{this.props.text}</Content>
         </div>
@@ -168,18 +201,25 @@ class Graphic extends Component {
   render() {
     return (
       <section className="section">
-
-      <div class="container">
-        <SectionTitle id="graphic">Graphic design </SectionTitle>
-        <SectionIntro>
-          Proident anim occaecat dolor deserunt ullamco duis dolore Lorem incididunt nostrud velit.
-        </SectionIntro>
-        <SubSectionTitle>Photos</SubSectionTitle>
-        <SubSectionTitle>Posters</SubSectionTitle>
-        <SubSectionTitle>3D</SubSectionTitle>
-      </div>
+        <div class="container">
+          <SectionTitle id="graphic">Graphic design </SectionTitle>
+          <SectionIntro>
+            Proident anim occaecat dolor deserunt ullamco duis dolore Lorem
+            incididunt nostrud velit.
+          </SectionIntro>
+          <SubSectionTitle>Photos</SubSectionTitle>
+          <SubSectionTitle>Posters</SubSectionTitle>
+          <SubSectionTitle>3D</SubSectionTitle>
+        </div>
       </section>
     );
+  }
+}
+
+
+class Galery extends Component{
+  render() {
+    return (<p>test</p>{this.state.contents.map((element, index) => ())};
   }
 }
 
