@@ -1,0 +1,72 @@
+ 
+ 
+ .timeline {
+    
+    padding: 50px 0;
+    margin: 50px auto;
+    position: relative;
+    overflow: hidden;
+ }
+ 
+ .timeline:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 10%;
+    margin-left: -3px;
+    width: 6px;
+    height: 90%;
+    background: $primary;
+    z-index: 1
+ }
+ 
+ .timeline-block {
+    width: -webkit-calc(90% + 8px);
+    width: -moz-calc(90% + 8px);
+    width: calc(90% + 8px);
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -moz-box-pack: justify;
+    justify-content: space-between;
+    clear: both;
+ }
+ 
+ .timeline-block-right {
+    float: right;
+ }
+ 
+ .marker {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 5px solid $primary;
+    background: $white;
+    margin-top: 10px;
+    z-index: 9999
+ }
+ 
+ .timeline-content {
+    width: 95%;
+    padding: 0 15px;
+ }
+ 
+ 
+ @media screen and (max-width: 768px) {
+    .timeline:before {
+       left: 8px;
+       width: 6px;
+    }
+    .timeline-block {
+       width: 100%;
+       margin-bottom: 30px;
+    }
+    .timeline-block-right {
+       float: none;
+    }
+ 
+ }
+ 

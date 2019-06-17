@@ -3,6 +3,8 @@
 
 @import "bulma/bulma.sass";
 @import "src/animation.scss";
+@import "src/timeline.scss";
+
 
 body {
   z-index: 0;
@@ -11,5 +13,6 @@ body {
   font-family: "Roboto";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  
 }
+
+
