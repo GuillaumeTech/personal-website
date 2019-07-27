@@ -1,34 +1,44 @@
 import React, { Component } from "react";
 import {Title,Center,SubSectionTitle,SectionIntro,SectionTitle,SubTitle,ImagesList,ExperienceTitle,Date,Content} from "./CssComponents.js"
 import AnchorLink from 'react-anchor-link-smooth-scroll'
+import { ParallaxProvider,Parallax } from 'react-scroll-parallax';
+import Masonry from 'react-image-masonry';
+
 
 const SmoothScroll = () => (
-  <body>
-    <section class="hero is-primary is-fullheight">
-      <div class="hero-body">
-        <div class="container">
-          <Title> Hi, I'm Guillaume</Title>
-          <Center>
-            I'm thrilled by the opportunity to learn. I'm a
+  <ParallaxProvider>
+  <body className="has-background-light">
+    <section className="hero is-light is-fullheight">
+      <div className="hero-body">
+        <div className="container">
+        <Title>Hi, I'm Guillaume</Title>
+        <Center>
+  
             <SubTitle className="hvr-sweep-to-right">
-              {" "}
+          
               <AnchorLink offset='80' href="#engineer">Software engineer</AnchorLink>
           
             </SubTitle>
-            interested in web development, machine learning and big-data.{" "}
-            <br />
-            I'm also a
+            and {""}  
             <SubTitle className="hvr-sweep-to-right">
-              {" "}
-              <AnchorLink offset='80' href="#graphic">Graphic design enthusiast </AnchorLink >
+            
+              <AnchorLink offset='80' href="#graphic">Graphic design enthusiast</AnchorLink >
             </SubTitle>
+            <br/>
+            <img
+                src={process.env.PUBLIC_URL + "/personal.svg"}
+                alt="Monkey face"
+                style={{  paddingTop: "1.5rem", width: "auto", height: "70px" }}
+              />
           </Center>
         </div>
       </div>
     </section>
     <Soft />
     <Graphic />
+    <Contact />
   </body>
+  </ParallaxProvider>
 );
 class App extends Component {
   render() {
@@ -40,73 +50,47 @@ class Soft extends Component {
   render() {
     return (
       <section className="section">
-        <div class="container">
+        <div className="container">
           
           <SectionTitle id="engineer">Software engineer</SectionTitle>
+          <Parallax x={[100, -20]}><div className="rectangle"></div></Parallax>
+          
+          
+          <div className="columns is-vcentered" >
+          <div className="column" >
           <SectionIntro>
-            Cupidatat amet mollit ex elit pariatur fugiat.
+            <br></br>
+            Cupidatat amet mollit ex elit pariatur fugiat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
           </SectionIntro>
-          <div class="columns" >
-          <div class="column" >
-
-          <SubSectionTitle>About Me</SubSectionTitle>
-          <ImagesList>              <img
-                src={process.env.PUBLIC_URL + "/py_logo.svg"}
-                alt="Monkey face"
-                style={{ padding: "0.5rem", width: "auto", height: "70px" }}
-              />
-              <img
-                src={process.env.PUBLIC_URL + "/C_logo.svg"}
-                alt="Monkey face"
-                style={{  padding: "0.5rem", width: "auto", height: "70px" }}
-              />
-              <img
-                src={process.env.PUBLIC_URL + "/js_logo.svg"}
-                alt="Monkey face"
-                style={{  padding: "0.5rem", width: "auto", height: "70px" }}
-              />
-              <img
-                src={process.env.PUBLIC_URL + "/linux_logo.svg"}
-                alt="Monkey face"
-                style={{  padding: "0.5rem", width: "auto", height: "70px" }}
-              />
-              <img
-                src={process.env.PUBLIC_URL + "/Matlab_Logo.png"}
-                alt="Monkey face"
-                style={{  padding: "0.5rem", width: "auto", height: "70px" }}
-              />
-              </ImagesList>
           </div>
-          <div class="column" >
-          <SubSectionTitle>Experiences</SubSectionTitle>
-          <div class="timeline">
+          <div className="column">
+
+          <div className="timeline">
           <Experience
-            title="Test"
+            title="IBM"
             text="Incididunt commodo ut ex officia fugiat elit exercitation cupidatat aliqua deserunt deserunt laboris officia."
             date="01/02/03 - 01/02/03"
           />
           <Experience
-            title="Test"
+            title="ARC"
             text="Reprehenderit laborum nostrud non aliqua excepteur."
             date="01/02/03 - 01/02/03"
           />
           <Experience
-            title="Test"
+            title="ESEO/Davidson"
             text="Eiusmod dolor tempor aute pariatur culpa elit commodo."
             date="01/02/03 - 01/02/03"
           />
           <Experience
-            title="Test"
+            title="ARM"
             text="Tempor nostrud ea laboris veniam deserunt adipisicing magna minim sint ex occaecat."
             date="01/02/03 - 01/02/03"
           />
+        
           </div>
-          <SubSectionTitle>Projects</SubSectionTitle>
-          <Experience
-            title="Test"
-            text="Tempor nostrud ea laboris veniam deserunt adipisicing magna minim sint ex occaecat."
-            date="01/02/03 - 01/02/03"
-          />
+          
           </div>
           </div>
         </div>
@@ -119,10 +103,10 @@ class Experience extends Component {
   render() {
     return (
       <div>
-        <div class="timeline-block timeline-block-right">
-          <div class="marker"></div>
-            <div class="timeline-content">
-              <ExperienceTitle className="has-text-primary">
+        <div className="timeline-block timeline-block-right">
+          <div className="marker"></div>
+            <div className="timeline-content">
+              <ExperienceTitle className="has-text-black">
                 {this.props.title}
               </ExperienceTitle>
               <Date>{this.props.date}</Date>
@@ -136,18 +120,74 @@ class Experience extends Component {
 }
 
 class Graphic extends Component {
+ 
+  constructor(props) {
+    super(props);
+    this.state = { 
+      posters: 
+      [
+      process.env.PUBLIC_URL + 'image/lorem.jpg',
+      process.env.PUBLIC_URL + 'image/paf.jpg',
+      process.env.PUBLIC_URL + 'image/sunset.jpg',
+      process.env.PUBLIC_URL + 'image/dj.jpg',
+      process.env.PUBLIC_URL + 'image/jump.jpg',
+      process.env.PUBLIC_URL + 'image/mountain.jpg',
+      process.env.PUBLIC_URL + 'image/path.jpg',
+      process.env.PUBLIC_URL + 'image/def.jpg',
+      process.env.PUBLIC_URL + 'image/mont.jpg',
+      process.env.PUBLIC_URL + 'image/statue.jpg',
+      process.env.PUBLIC_URL + 'image/uku.jpg',
+      ]
+     
+  }
+  }
+  
+  
   render() {
     return (
       <section className="section">
-        <div class="container">
+        <div className="container">
           <SectionTitle id="graphic">Graphic design </SectionTitle>
+          <Parallax x={[100, -20]}><div className="rectangle"></div></Parallax>
+          
           <SectionIntro>
             Proident anim occaecat dolor deserunt ullamco duis dolore Lorem
             incididunt nostrud velit.
           </SectionIntro>
-          <SubSectionTitle>Photos</SubSectionTitle>
-          <SubSectionTitle>Posters</SubSectionTitle>
-          <SubSectionTitle>3D</SubSectionTitle>
+          <Masonry
+                numCols={2}
+               
+            >
+              {this.state.posters.map(img => <div className='image'><img 
+            src={img} 
+               /></div>)}
+
+                
+            </Masonry>
+
+        </div>
+      </section>
+    );
+  }
+}
+
+class Contact extends Component {
+  constructor(props) {
+    super(props);
+  }
+  
+  render() {
+    return (
+      <section className="section">
+        <div className="container">
+          <SectionTitle id="graphic">Contact</SectionTitle>
+          <Parallax x={[100, -20]}><div className="rectangle"></div></Parallax>
+          
+          <SectionIntro>
+            Proident anim occaecat dolor deserunt ullamco duis dolore Lorem
+            incididunt nostrud velit.
+          </SectionIntro>
+
         </div>
       </section>
     );

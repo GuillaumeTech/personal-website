@@ -1,18 +1,38 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,400i,500,700,900|Source+Sans+Pro:400,600,700,900');
 @import "src/customisations.scss";
 
+
 @import "bulma/bulma.sass";
 @import "src/animation.scss";
 @import "src/timeline.scss";
+@import "react-alice-carousel/lib/scss/alice-carousel.scss";
 
+a {
+  color:$black;
+  
+}
+
+a:hover{
+  color:$light;
+}
+
+.rectangle {
+  width:20rem;
+	height:1rem;
+	background: $primary_gradient;
+}
 
 body {
   z-index: 0;
   margin: 0;
-  background-color: #ffffff;
+  background-color: $light;
   font-family: "Roboto";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.image{
+  padding: 20px;
 }
 
 

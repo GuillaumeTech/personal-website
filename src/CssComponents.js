@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 export const Title = styled.h1`
-  font-size: 5rem;
-  color: White;
-  text-align: center;
+  font-size: 3rem;
+  color:rgb(0,0,0);
+  text-align: left;
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 900;
   animation: tracking-in-contract 0.5s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
@@ -25,7 +25,8 @@ export const ExperienceTitle = styled.h1`
 `;
 
 export const Center = styled.div`
-  text-align: center;
+  text-align: left;
+  color:rgb(0,0,0);
   font-size: 2rem;
   animation: reveal 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
   animation-delay: 0.5s;
@@ -34,26 +35,23 @@ export const Center = styled.div`
 export const SubTitle = styled.div`
   padding-left: 0.3rem;
   padding-right: 0.3rem;
-  margin-left: 0.3rem;
+  margin-left: 0rem;
   margin-right: 0.3rem;
-  border-style: solid;
-  border-width: 0.3rem;
+  border-bottom-style: solid;
+  border-bottomwidth: 0.3rem;
   font-size: 2rem;
-  color: White;
+  color:black;
 `;
 
 export const SectionIntro = styled.p`
   font-size: 1.2rem;
+  align-items: center;
 `;
 
-export const SectionTitle = styled(SubTitle)`
-  padding-left: 0.3rem;
-  padding-right: 0.3rem;
-  margin-left: 0rem;
-  margin-right: 0rem;
-  margin-top: 3rem;
-  margin-bottom: 2rem;
-  color: hsl(236, 51%, 36%);
+export const SectionTitle = styled.div`
+  font-size: 2rem;
+  color: black;
+  
 `;
 
 export const SubSectionTitle = styled.div`
