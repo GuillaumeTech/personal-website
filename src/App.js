@@ -132,11 +132,17 @@ class Graphic extends Component {
       process.env.PUBLIC_URL + 'image/dj.jpg',
       process.env.PUBLIC_URL + 'image/jump.jpg',
       process.env.PUBLIC_URL + 'image/mountain.jpg',
-      process.env.PUBLIC_URL + 'image/path.jpg',
       process.env.PUBLIC_URL + 'image/def.jpg',
+      process.env.PUBLIC_URL + 'image/electro.jpg',
+      process.env.PUBLIC_URL + 'image/toit.jpg',
       process.env.PUBLIC_URL + 'image/mont.jpg',
       process.env.PUBLIC_URL + 'image/statue.jpg',
       process.env.PUBLIC_URL + 'image/uku.jpg',
+      process.env.PUBLIC_URL + 'image/porte.jpg',
+      process.env.PUBLIC_URL + 'image/gala.jpg',
+      process.env.PUBLIC_URL + 'image/stage.jpg',
+      process.env.PUBLIC_URL + 'image/run.jpg',
+      
       ]
      
   }
