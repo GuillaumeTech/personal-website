@@ -3,6 +3,7 @@ import {Title,Center,SubSectionTitle,SectionIntro,SectionTitle,SubTitle,ImagesLi
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 import { ParallaxProvider,Parallax } from 'react-scroll-parallax';
 import Masonry from 'react-image-masonry';
+import Img from 'react-image'
 
 
 const SmoothScroll = () => (
@@ -41,6 +42,8 @@ const SmoothScroll = () => (
   </ParallaxProvider>
 );
 class App extends Component {
+  
+
   render() {
   return(<SmoothScroll/>)
   }
@@ -71,22 +74,22 @@ class Soft extends Component {
           <Experience
             title="IBM"
             text="Incididunt commodo ut ex officia fugiat elit exercitation cupidatat aliqua deserunt deserunt laboris officia."
-            date="01/02/03 - 01/02/03"
+            date="03/2019 - 09/2019"
           />
           <Experience
             title="ARC"
             text="Reprehenderit laborum nostrud non aliqua excepteur."
-            date="01/02/03 - 01/02/03"
+            date="07/2018 - 08/2018"
           />
           <Experience
             title="ESEO/Davidson"
             text="Eiusmod dolor tempor aute pariatur culpa elit commodo."
-            date="01/02/03 - 01/02/03"
+            date="02/2018 - 06/2018"
           />
           <Experience
             title="ARM"
             text="Tempor nostrud ea laboris veniam deserunt adipisicing magna minim sint ex occaecat."
-            date="01/02/03 - 01/02/03"
+            date="07/2017 - 10/2017"
           />
         
           </div>
@@ -126,23 +129,66 @@ class Graphic extends Component {
     this.state = { 
       posters: 
       [
-      process.env.PUBLIC_URL + 'image/lorem.jpg',
-      process.env.PUBLIC_URL + 'image/paf.jpg',
-      process.env.PUBLIC_URL + 'image/sunset.jpg',
-      process.env.PUBLIC_URL + 'image/dj.jpg',
-      process.env.PUBLIC_URL + 'image/jump.jpg',
-      process.env.PUBLIC_URL + 'image/mountain.jpg',
-      process.env.PUBLIC_URL + 'image/def.jpg',
-      process.env.PUBLIC_URL + 'image/electro.jpg',
-      process.env.PUBLIC_URL + 'image/toit.jpg',
-      process.env.PUBLIC_URL + 'image/mont.jpg',
-      process.env.PUBLIC_URL + 'image/statue.jpg',
-      process.env.PUBLIC_URL + 'image/uku.jpg',
-      process.env.PUBLIC_URL + 'image/porte.jpg',
-      process.env.PUBLIC_URL + 'image/gala.jpg',
-      process.env.PUBLIC_URL + 'image/stage.jpg',
-      process.env.PUBLIC_URL + 'image/run.jpg',
-      
+      {
+        image : process.env.PUBLIC_URL + 'image/lorem.jpg',
+        placeholder : process.env.PUBLIC_URL + 'image/placeholder/poster.jpg'
+      },
+      {
+        image : process.env.PUBLIC_URL + 'image/paf.jpg',
+        placeholder : process.env.PUBLIC_URL + 'image/placeholder/paf.jpg'
+      },
+      {
+        image : process.env.PUBLIC_URL + 'image/def.jpg',
+        placeholder : process.env.PUBLIC_URL + 'image/placeholder/def.jpg'
+      },
+      {
+        image : process.env.PUBLIC_URL + 'image/sunset.jpg',
+        placeholder : process.env.PUBLIC_URL + 'image/placeholder/sunset.jpg'
+      },
+      {
+        image : process.env.PUBLIC_URL + 'image/dj.jpg',
+        placeholder : process.env.PUBLIC_URL + 'image/placeholder/dj.jpg'
+      },
+      {
+        image : process.env.PUBLIC_URL + 'image/jump.jpg',
+        placeholder : process.env.PUBLIC_URL + 'image/placeholder/poster.jpg'
+      },
+      {
+        image : process.env.PUBLIC_URL + 'image/electro.jpg',
+        placeholder : process.env.PUBLIC_URL + 'image/placeholder/poster.jpg'
+      },
+      {
+        image : process.env.PUBLIC_URL + 'image/toit.jpg',
+        placeholder : process.env.PUBLIC_URL + 'image/placeholder/toit.jpg'
+      },
+      {
+        image : process.env.PUBLIC_URL + 'image/mont.jpg',
+        placeholder : process.env.PUBLIC_URL + 'image/placeholder/mont.jpg'
+      },
+      {
+        image : process.env.PUBLIC_URL + 'image/statue.jpg',
+        placeholder : process.env.PUBLIC_URL + 'image/placeholder/statue.jpg'
+      },
+      {
+        image : process.env.PUBLIC_URL + 'image/porte.jpg',
+        placeholder : process.env.PUBLIC_URL + 'image/placeholder/porte.jpg'
+      },
+      {
+        image : process.env.PUBLIC_URL + 'image/uku.jpg',
+        placeholder : process.env.PUBLIC_URL + 'image/placeholder/uku.jpg'
+      },
+      {
+        image : process.env.PUBLIC_URL + 'image/run.jpg',
+        placeholder : process.env.PUBLIC_URL + 'image/placeholder/run.jpg'
+      },
+      {
+        image : process.env.PUBLIC_URL + 'image/gala.jpg',
+        placeholder : process.env.PUBLIC_URL + 'image/placeholder/poster.jpg'
+      },
+      {
+        image : process.env.PUBLIC_URL + 'image/stage.jpg',
+        placeholder : process.env.PUBLIC_URL + 'image/placeholder/poster.jpg'
+      },
       ]
      
   }
@@ -157,15 +203,23 @@ class Graphic extends Component {
           <Parallax x={[100, -20]}><div className="rectangle"></div></Parallax>
           
           <SectionIntro>
-            Proident anim occaecat dolor deserunt ullamco duis dolore Lorem
-            incididunt nostrud velit.
+            I do graphic design, photography and some 3D on my free time, I was also involved in various non-profit organisation and did posters during my time with them. 
+            
+            
+            You can find all my photos on <a className="hvr-sweep-to-right link" href='https://unsplash.com/@guillaume_t'>Unsplash</a>{'\u00A0'}
+           you can also follow me on <a className="hvr-sweep-to-right link" href='https://www.instagram.com/guillaume_tech/'>Instagram</a>
+           <br/><br/>Here are some of my realisations I'm the most proud of !
+            
+                
+
           </SectionIntro>
           <Masonry
                 numCols={2}
                
             >
-              {this.state.posters.map(img => <div className='image'><img 
-            src={img} 
+              {this.state.posters.map(img => <div className='image'><Img 
+            src={img.image}
+            loader={<img src={img.placeholder}/>} 
                /></div>)}
 
                 
@@ -192,8 +246,9 @@ class Contact extends Component {
           <SectionIntro>
             Proident anim occaecat dolor deserunt ullamco duis dolore Lorem
             incididunt nostrud velit.
+            <a className="hvr-sweep-to-right link" href='https://www.linkedin.com/in/guillaumetecher/'>Linkedin</a>
           </SectionIntro>
-
+          
         </div>
       </section>
     );

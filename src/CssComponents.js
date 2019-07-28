@@ -46,28 +46,13 @@ export const SubTitle = styled.div`
 export const SectionIntro = styled.p`
   font-size: 1.2rem;
   align-items: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  color:black;
 `;
 
 export const SectionTitle = styled.div`
   font-size: 2rem;
   color: black;
   
-`;
-
-export const SubSectionTitle = styled.div`
-  padding-left: 0.3rem;
-  padding-right: 0.3rem;
-  margin-left: 0rem;
-  margin-right: 0rem;
-  margin-top: 3rem;
-  margin-bottom: 2rem;
-  color: hsl(236, 51%, 36%);
-  border-bottom: 0.2rem solid;
-  font-size: 1.5rem;
-`;
-
-export const ImagesList = styled.div`
-display: flex;
-flex-wrap: wrap;
-justify-content: space-around;
 `;
