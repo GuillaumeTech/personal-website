@@ -29,7 +29,7 @@ const SmoothScroll = () => (
            
             <img
                 src={process.env.PUBLIC_URL + "/personal.svg"}
-                alt="Monkey face"
+                alt="personal logo"
                 style={{  paddingTop: "1.5rem", width: "auto", height: "70px" }}
               />
           </Center>
@@ -65,9 +65,11 @@ class Soft extends Component {
           <div className="column" >
           <SectionIntro>
             <br></br>
-            Cupidatat amet mollit ex elit pariatur fugiat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            I'm someone curious that is motivated by the idea of learning new things and putting them into practice.
+I’m interested in web development and design. 
+<br/>
+<br/>
+You can find my full resume  <Link className="hvr-sweep-to-right" href={process.env.PUBLIC_URL +'resume_GuillaumeTECHER.pdf'}>here</Link>{'\u00A0'}
           </SectionIntro>
           </div>
           <div className="column">
@@ -75,22 +77,22 @@ class Soft extends Component {
           <div className="timeline">
           <Experience
             title="IBM"
-            text="Incididunt commodo ut ex officia fugiat elit exercitation cupidatat aliqua deserunt deserunt laboris officia."
+            text="Fullstack developper"
             date="03/2019 - 09/2019"
           />
           <Experience
             title="ARC"
-            text="Reprehenderit laborum nostrud non aliqua excepteur."
+            text="Fullstack developper"
             date="07/2018 - 08/2018"
           />
           <Experience
             title="ESEO/Davidson"
-            text="Eiusmod dolor tempor aute pariatur culpa elit commodo."
+            text="Projet manager (educational purpose)"
             date="02/2018 - 06/2018"
           />
           <Experience
             title="ARM"
-            text="Tempor nostrud ea laboris veniam deserunt adipisicing magna minim sint ex occaecat."
+            text="Performance analysis engineer"
             date="07/2017 - 10/2017"
           />
         
@@ -246,9 +248,10 @@ class Contact extends Component {
           <Parallax x={[100, -20]}><div className="rectangle"></div></Parallax>
           
           <SectionIntro>
-            Proident anim occaecat dolor deserunt ullamco duis dolore Lorem
-            incididunt nostrud velit.
-            <a className="hvr-sweep-to-right link" href='https://www.linkedin.com/in/guillaumetecher/'>Linkedin</a>
+            You want to work with me, use one of my poster or just want to chat ?
+            <br/>
+            I'd be happy to hear from you !
+            <br/>
             <Link className="hvr-sweep-to-right" href='https://www.linkedin.com/in/guillaumetecher/'>Linkedin</Link>
           </SectionIntro>
          
