@@ -19,6 +19,7 @@ import { ThemeProvider } from "styled-components";
 import Contact from "./components/Contact"
 import Graphic from "./components/Graphic"
 import Soft from "./components/Soft"
+import Footer from "./components/Footer"
 
 const SmoothScroll = () => (
   <ParallaxProvider>
@@ -59,6 +60,7 @@ const SmoothScroll = () => (
         <Soft />
         <Graphic />
         <Contact />
+        <Footer/>
       </body>
     </ThemeProvider>
   </ParallaxProvider>
