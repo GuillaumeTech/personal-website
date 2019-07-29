@@ -1,15 +1,14 @@
 import styled from "styled-components";
 
-
 export const Link = styled.a`
   border-bottom-style: solid;
   border-bottomwidth: 0.3rem;
   color: ${props => props.theme.black};
 
   &:hover {
-    color:${props => props.theme.light};;
-  }`;
-
+    color: ${props => props.theme.light};
+  }
+`;
 
 export const Title = styled.h1`
   font-size: 3rem;
@@ -17,7 +16,7 @@ export const Title = styled.h1`
   text-align: left;
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 900;
-  animation: tracking-in-contract 0.5s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+  animation: tracking-in-contract 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) both;
   animation-delay: 0.1s;
   white-space: nowrap;
 `;
@@ -39,7 +38,7 @@ export const Center = styled.div`
   text-align: left;
   color: ${props => props.theme.black};
   font-size: 2rem;
-  animation: reveal 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+  animation: reveal 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) both;
   animation-delay: 0.5s;
 `;
 
@@ -58,6 +57,5 @@ export const SectionIntro = styled.p`
 
 export const SectionTitle = styled.div`
   font-size: 2rem;
-  color:  ${props => props.theme.black};
-  
+  color: ${props => props.theme.black};
 `;
