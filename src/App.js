@@ -62,6 +62,7 @@ const SmoothScroll = () => (
         <Contact />
         <Footer/>
       </body>
+      
     </ThemeProvider>
   </ParallaxProvider>
 );

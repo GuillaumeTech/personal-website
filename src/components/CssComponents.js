@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+export const Input = styled.input`
+border: 0.1rem solid ${props => props.theme.primary};
+`
+
 export const Link = styled.a`
   border-bottom-style: solid;
   border-bottomwidth: 0.3rem;
@@ -23,15 +27,18 @@ export const Title = styled.h1`
 
 export const Date = styled.p`
   font-size: 0.8rem;
+  color: ${props => props.theme.black};
 `;
 
 export const Content = styled.p`
   font-size: 1.2rem;
+  color: ${props => props.theme.black};
 `;
 
 export const ExperienceTitle = styled.h1`
   font-size: 1.5rem;
   font-weight: 600;
+  color: ${props => props.theme.black};
 `;
 
 export const Center = styled.div`

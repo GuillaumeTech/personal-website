@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { SectionIntro, SectionTitle, Link } from "./CssComponents";
+import { SectionIntro, SectionTitle, Link, Input } from "./CssComponents";
 import { Parallax } from "react-scroll-parallax";
 
 class Contact extends Component {
@@ -22,6 +22,7 @@ class Contact extends Component {
             <br />
             I'd be happy to hear from you !
             <br />
+            <Input></Input>
             <Link
               className="hvr-sweep-to-right"
               href="https://www.linkedin.com/in/guillaumetecher/"
