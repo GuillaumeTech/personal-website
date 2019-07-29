@@ -1,31 +1,32 @@
 import React, { Component } from "react";
-import {Title,Center,SubSectionTitle,SectionIntro,SectionTitle,SubTitle,ImagesList,ExperienceTitle,Date,Content} from "./CssComponents.js"
+import {Title,Center,SubSectionTitle,SectionIntro,SectionTitle,SubTitle,ExperienceTitle,Date,Content, Link} from "./CssComponents.js"
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 import { ParallaxProvider,Parallax } from 'react-scroll-parallax';
 import Masonry from 'react-image-masonry';
 import Img from 'react-image'
+import theme from './theme'
+import {ThemeProvider} from "styled-components";
 
 
 const SmoothScroll = () => (
   <ParallaxProvider>
+    <ThemeProvider theme={theme}>
   <body className="has-background-light">
     <section className="hero is-light is-fullheight">
       <div className="hero-body">
         <div className="container">
         <Title>Hi, I'm Guillaume</Title>
         <Center>
-  
-            <SubTitle className="hvr-sweep-to-right">
-          
-              <AnchorLink offset='80' href="#engineer">Software engineer</AnchorLink>
-          
-            </SubTitle>
-            and {""}  
-            <SubTitle className="hvr-sweep-to-right">
             
-              <AnchorLink offset='80' href="#graphic">Graphic design enthusiast</AnchorLink >
+            <SubTitle >
+              
+              <AnchorLink offset='80' href="#engineer"><Link className="hvr-sweep-to-right">Software engineer</Link></AnchorLink>
+              {""} and {""} 
+            
+              <AnchorLink offset='80' href="#graphic"><Link className="hvr-sweep-to-right">Graphic design enthusiast</Link></AnchorLink >
+              
             </SubTitle>
-            <br/>
+           
             <img
                 src={process.env.PUBLIC_URL + "/personal.svg"}
                 alt="Monkey face"
@@ -39,6 +40,7 @@ const SmoothScroll = () => (
     <Graphic />
     <Contact />
   </body>
+  </ThemeProvider>
   </ParallaxProvider>
 );
 class App extends Component {
@@ -109,7 +111,7 @@ class Experience extends Component {
         <div className="timeline-block timeline-block-right">
           <div className="marker"></div>
             <div className="timeline-content">
-              <ExperienceTitle className="has-text-black">
+              <ExperienceTitle>
                 {this.props.title}
               </ExperienceTitle>
               <Date>{this.props.date}</Date>
@@ -206,8 +208,8 @@ class Graphic extends Component {
             I do graphic design, photography and some 3D on my free time, I was also involved in various non-profit organisation and did posters during my time with them. 
             
             
-            You can find all my photos on <a className="hvr-sweep-to-right link" href='https://unsplash.com/@guillaume_t'>Unsplash</a>{'\u00A0'}
-           you can also follow me on <a className="hvr-sweep-to-right link" href='https://www.instagram.com/guillaume_tech/'>Instagram</a>
+            You can find all my photos on <Link className="hvr-sweep-to-right" href='https://unsplash.com/@guillaume_t'>Unsplash</Link>{'\u00A0'}
+           you can also follow me on <Link className="hvr-sweep-to-right" href='https://www.instagram.com/guillaume_tech/'>Instagram</Link>
            <br/><br/>Here are some of my realisations I'm the most proud of !
             
                 
@@ -247,7 +249,9 @@ class Contact extends Component {
             Proident anim occaecat dolor deserunt ullamco duis dolore Lorem
             incididunt nostrud velit.
             <a className="hvr-sweep-to-right link" href='https://www.linkedin.com/in/guillaumetecher/'>Linkedin</a>
+            <Link className="hvr-sweep-to-right" href='https://www.linkedin.com/in/guillaumetecher/'>Linkedin</Link>
           </SectionIntro>
+         
           
         </div>
       </section>
