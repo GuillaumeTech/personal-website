@@ -1,7 +1,29 @@
 import styled from "styled-components";
 
 export const Input = styled.input`
-border: 0.1rem solid ${props => props.theme.primary};
+border: 0rem solid ${props => props.theme.primary};
+width: 100%;
+font-size: 1.5rem;
+border-bottom: 0.2rem solid ${props => props.theme.primary};
+background-color:$light;
+padding: 0.5rem
+&::placeholder { 
+  color: ${props => props.theme.black};
+  opacity:0.7;
+}
+`
+
+export const TextArea = styled.textarea`
+border: 0.2rem solid ${props => props.theme.primary};
+font-size: 1.25rem;
+width: 100%;
+height: 15rem;
+padding: 0.5rem
+background-color:$light;
+&::placeholder { 
+  color: ${props => props.theme.black};
+  opacity:0.7;
+}
 `
 
 
@@ -10,8 +32,8 @@ export const Link = styled.a`
 `;
 
 export const IntroLink = styled(Link)`
-  border-bottom-style: solid;
-  border-bottomwidth: 0.3rem;
+border-bottom-style: solid;
+border-bottomwidth: 0.3rem;
 
 font-family: "Source Sans Pro", sans-serif;
 font-weight: 600;

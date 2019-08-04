@@ -1,11 +1,15 @@
 import React, { Component } from "react";
-import { SectionIntro, SectionTitle, Link, Input } from "./CssComponents";
+import {
+  SectionIntro,
+  SectionTitle,
+  Link,
+  Input,
+  TextArea
+} from "./CssComponents";
 import { Parallax } from "react-scroll-parallax";
 
 class Contact extends Component {
-  constructor(props) {
-    super(props);
-  }
+ 
 
   render() {
     return (
@@ -17,18 +21,49 @@ class Contact extends Component {
           </Parallax>
 
           <SectionIntro>
-            You want to work with me, use one of my poster or just want to chat
+            You want to work with me, use one of my posters or just want to chat
             ?
             <br />
-            I'd be happy to hear from you !
-            <br />
-            <Input></Input>
+            Use the following form, or send me a message through{" "}
             <Link
-              className="hvr-sweep-to-right"
+              className="underline"
               href="https://www.linkedin.com/in/guillaumetecher/"
             >
               Linkedin
-            </Link>
+            </Link>,{" "}
+            I'd be happy to hear from you !
+            <br />
+            <br />
+            <form>
+              <div className="columns">
+                <div className="column is-half">
+                  <div class="field">
+                    <label class="label is-size-5">Name</label>
+                    <div class="control">
+                      <Input placeholder="Your name" />
+                    </div>
+                  </div>
+                  </div>
+
+                  <div className="column is-half">
+                    <div className="field">
+                      <label className="label is-size-5">E-Mail</label>
+                      <div className="control">
+                        <Input placeholder="Your e-mail" />
+                      </div>
+                    </div>
+                  </div>
+              </div>
+              <div class="field">
+                      <label class="label is-size-5">Message</label>
+                      <div class="control">
+              <TextArea placeholder="Say what you want ! " />
+              </div>
+                    </div>
+                    <div class="control">
+    <button class="button is-primary is-medium">Submit</button>
+  </div>
+            </form>
           </SectionIntro>
         </div>
       </section>
