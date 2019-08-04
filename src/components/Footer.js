@@ -5,8 +5,8 @@ class Footer extends Component {
   render() {
     return (
       <section className="section">
-        <footer class="footer">
-          <div class="content has-text-centered">
+        <footer className="footer">
+          <div className="content has-text-centered">
             <p>
               
               Copyright © Guillaume TECHER

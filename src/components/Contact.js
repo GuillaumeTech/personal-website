@@ -37,9 +37,9 @@ class Contact extends Component {
             <form>
               <div className="columns">
                 <div className="column is-half">
-                  <div class="field">
-                    <label class="label is-size-5">Name</label>
-                    <div class="control">
+                  <div className="field">
+                    <label className="label is-size-5">Name</label>
+                    <div className="control">
                       <Input placeholder="Your name" />
                     </div>
                   </div>
@@ -54,14 +54,14 @@ class Contact extends Component {
                     </div>
                   </div>
               </div>
-              <div class="field">
-                      <label class="label is-size-5">Message</label>
-                      <div class="control">
+              <div className="field">
+                      <label className="label is-size-5">Message</label>
+                      <div className="control">
               <TextArea placeholder="Say what you want ! " />
               </div>
                     </div>
-                    <div class="control">
-    <button class="button is-primary is-medium">Submit</button>
+                    <div className="control">
+    <button className="button is-primary is-medium">Submit</button>
   </div>
             </form>
           </SectionIntro>
