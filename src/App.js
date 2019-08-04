@@ -16,11 +16,13 @@ import Contact from "./components/Contact"
 import Graphic from "./components/Graphic"
 import Soft from "./components/Soft"
 import Footer from "./components/Footer"
+import Navbar from "./components/Navbar"
 
 const SmoothScroll = () => (
   <ParallaxProvider>
     <ThemeProvider theme={theme}>
       <body className="has-background-light">
+      <Navbar/>
         <section className="hero is-fullheight">
           <div className="hero-body">
             <div className="container">
