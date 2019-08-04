@@ -1,6 +1,20 @@
 $primary: rgb(62, 39, 146);
 $black : rgb(13, 3, 29);
-$light: hsl(44, 100%, 97%);
+$light: hsl(180, 1%, 92%);
 $orange:  rgb(88, 110, 236);
 $primary_gradient: linear-gradient(60deg,$primary,$orange);
-$footer-background-color: $light
+
+
+$family-primary: 'Lato';
+
+
+$text:$black;
+$footer-background-color: $light;
+$background: $light;
+$body-background-color: $light;
+
+
+$radius-small:0;
+$radius: 0;
+$radius-large:0;
+$radius-rounded:0;

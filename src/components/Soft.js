@@ -24,13 +24,13 @@ class Soft extends Component {
               <SectionIntro>
                 <br />
                 I'm someone curious that is motivated by the idea of learning
-                new things and putting them into practice. I’m interested in web
-                development and design.
+                  new things and putting them into practice. <br />I’m interested in
+                  web development and design.
                 <br />
                 <br />
                 You can find my full resume{" "}
                 <Link
-                  className="hvr-sweep-to-right"
+                    className="underline"
                   href={process.env.PUBLIC_URL + "resume_GuillaumeTECHER.pdf"}
                 >
                   here

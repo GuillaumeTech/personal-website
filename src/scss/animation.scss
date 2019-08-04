@@ -1,4 +1,17 @@
 /* Sweep To Right */
+
+.underline {
+  background-image: $primary_gradient;
+  background-repeat: no-repeat;
+  background-size: 100% 7%;
+  background-position: 0 100%;
+  transition: background-size 0.25s ease-in;
+  &:hover {
+    background-size: 100% 100%;
+    color: $black;
+  }
+}
+
 .hvr-sweep-to-right {
   display: inline-block;
   -webkit-transform: perspective(1px) translateZ(0);

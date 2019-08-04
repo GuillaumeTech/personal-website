@@ -2,17 +2,13 @@ import React, { Component } from "react";
 import {
   Title,
   Center,
-  SubSectionTitle,
-  SectionIntro,
-  SectionTitle,
+  IntroLink,
+ 
   SubTitle,
-  ExperienceTitle,
-  Date,
-  Content,
-  Link
+  
 } from "./components/CssComponents.js";
 import AnchorLink from "react-anchor-link-smooth-scroll";
-import { ParallaxProvider, Parallax } from "react-scroll-parallax";
+import { ParallaxProvider} from "react-scroll-parallax";
 
 import theme from "./theme";
 import { ThemeProvider } from "styled-components";
@@ -25,22 +21,22 @@ const SmoothScroll = () => (
   <ParallaxProvider>
     <ThemeProvider theme={theme}>
       <body className="has-background-light">
-        <section className="hero is-light is-fullheight">
+        <section className="hero is-fullheight">
           <div className="hero-body">
             <div className="container">
               <Title>Hi, I'm Guillaume</Title>
               <Center>
                 <SubTitle>
                   <AnchorLink offset="80" href="#engineer">
-                    <Link className="hvr-sweep-to-right">
+                    <IntroLink className="hvr-sweep-to-right">
                       Software engineer
-                    </Link>
+                    </IntroLink>
                   </AnchorLink>
-                  {""} and {""}
+                  {""} &amp; {""}
                   <AnchorLink offset="80" href="#graphic">
-                    <Link className="hvr-sweep-to-right">
+                    <IntroLink className="hvr-sweep-to-right">
                       Graphic design enthusiast
-                    </Link>
+                    </IntroLink>
                   </AnchorLink>
                 </SubTitle>
 

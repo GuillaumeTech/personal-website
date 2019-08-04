@@ -85,17 +85,17 @@ class Graphic extends Component {
           <SectionIntro>
             I do graphic design, photography and some 3D on my free time, I was
             also involved in various non-profit organisation and did posters
-            during my time with them. You can find all my photos on{" "}
+            during my time with them.<br /> You can find all my photos on{" "}
             <Link
-              className="hvr-sweep-to-right"
+              className="underline"
               href="https://unsplash.com/@guillaume_t"
             >
               Unsplash
             </Link>
-            {"\u00A0"}
-            you can also follow me on{" "}
+            ,{"\u00A0"}
+             you can also follow me on{" "}
             <Link
-              className="hvr-sweep-to-right"
+              className="underline"
               href="https://www.instagram.com/guillaume_tech/"
             >
               Instagram
@@ -107,7 +107,7 @@ class Graphic extends Component {
           <Masonry numCols={2}>
             {this.state.posters.map(img => (
               <div className="image">
-                <Img src={img.image} loader={<img src={img.placeholder} />} />
+                <Img src={img.image} loader={<img src={img.placeholder} alt='' />} />
               </div>
             ))}
           </Masonry>

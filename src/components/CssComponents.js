@@ -4,11 +4,17 @@ export const Input = styled.input`
 border: 0.1rem solid ${props => props.theme.primary};
 `
 
+
 export const Link = styled.a`
+  color: ${props => props.theme.black};
+`;
+
+export const IntroLink = styled(Link)`
   border-bottom-style: solid;
   border-bottomwidth: 0.3rem;
-  color: ${props => props.theme.black};
 
+font-family: "Source Sans Pro", sans-serif;
+font-weight: 600;
   &:hover {
     color: ${props => props.theme.light};
   }
@@ -51,11 +57,15 @@ export const Center = styled.div`
 
 export const SubTitle = styled.div`
   font-size: 2rem;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 700;
   color: ${props => props.theme.black};
 `;
 
 export const SectionIntro = styled.p`
-  font-size: 1.2rem;
+text-align: justify;
+  text-justify: inter-word;
+  font-size: 1.4rem;
   align-items: center;
   padding-top: 2rem;
   padding-bottom: 2rem;
@@ -63,6 +73,8 @@ export const SectionIntro = styled.p`
 `;
 
 export const SectionTitle = styled.div`
-  font-size: 2rem;
+  font-size: 2.5rem;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 900;
   color: ${props => props.theme.black};
 `;
