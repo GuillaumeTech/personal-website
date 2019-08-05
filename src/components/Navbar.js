@@ -2,7 +2,7 @@ import React, { Component } from "react";
 class Navbar extends Component {
   render() {
     return (
-      <nav className="navbar is-primary is-fixed-top" role="navigation" aria-label="main navigation">
+      <nav className="navbar has-shadow is-primary is-fixed-top" role="navigation" aria-label="main navigation">
         <div className="navbar-brand">
           <a className="navbar-item" href="">
             <img
@@ -30,7 +30,6 @@ class Navbar extends Component {
             <a className="navbar-item">Engineering</a>
             <a className="navbar-item">Projects</a>
             <a className="navbar-item">Design</a>
-
             <a className="navbar-item">Contact</a>
 
           </div>
