@@ -34,7 +34,6 @@ export const Link = styled.a`
 export const IntroLink = styled(Link)`
 border-bottom-style: solid;
 border-bottomwidth: 0.3rem;
-
 font-family: "Source Sans Pro", sans-serif;
 font-weight: 600;
   &:hover {
@@ -80,13 +79,13 @@ export const Center = styled.div`
 export const SubTitle = styled.div`
   font-size: 2rem;
   font-family: "Source Sans Pro", sans-serif;
-  font-weight: 700;
+  font-weight: 600;
   color: ${props => props.theme.black};
 `;
 
 export const SectionIntro = styled.p`
-text-align: justify;
-  text-justify: inter-word;
+text-align: left;
+  text-left: inter-word;
   font-size: 1.4rem;
   align-items: center;
   padding-top: 2rem;
