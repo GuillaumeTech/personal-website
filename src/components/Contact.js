@@ -15,10 +15,8 @@ class Contact extends Component {
     return (
       <section className="section">
         <div className="container">
-          <SectionTitle id="graphic">Contact</SectionTitle>
-          <Parallax x={[100, -20]}>
+          <SectionTitle id="contact">Contact</SectionTitle>
             <div className="rectangle" />
-          </Parallax>
 
           <SectionIntro>
             You want to work with me, use one of my posters or just want to chat

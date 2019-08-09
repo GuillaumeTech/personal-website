@@ -78,9 +78,7 @@ class Graphic extends Component {
       <section className="section">
         <div className="container">
           <SectionTitle id="graphic">Graphic design </SectionTitle>
-          <Parallax x={[100, -20]}>
             <div className="rectangle" />
-          </Parallax>
 
           <SectionIntro>
             I do graphic design, photography and some 3D on my free time, I was

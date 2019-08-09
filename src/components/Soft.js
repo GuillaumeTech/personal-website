@@ -15,9 +15,7 @@ class Soft extends Component {
       <section className="section">
         <div className="container">
           <SectionTitle id="engineer">Software engineer</SectionTitle>
-          <Parallax x={[100, -20]}>
             <div className="rectangle" />
-          </Parallax>
 
           <div className="columns is-vcentered">
             <div className="column">
