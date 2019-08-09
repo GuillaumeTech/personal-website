@@ -1,5 +1,22 @@
 import styled from "styled-components";
 
+
+export const Top = styled.div`
+  display: block; 
+  position: fixed; 
+  bottom: 3rem; 
+  right: 4rem;
+  z-index: 99; 
+  background: ${props => props.theme.light}; 
+  box-shadow: 0px 2px 50px rgba(13, 3, 29,0.1);
+  color: ${props => props.theme.black}; 
+  padding: 1.3rem; 
+  font-size: 1rem; 
+  @media (max-width: 768px) {
+
+  }
+`
+
 export const Input = styled.input`
 border: 0rem solid ${props => props.theme.primary};
 width: 100%;
