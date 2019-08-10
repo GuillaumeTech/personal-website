@@ -27,7 +27,7 @@ class Soft extends Component {
     if (this.title.getBoundingClientRect().y < 150 && this.title.getBoundingClientRect().y > 70) { // on top of the screen
       this.title.style.animationPlayState = "running"
       setTimeout(() => this.title.style.animation = "none", 500)
-    } else if (this.title.getBoundingClientRect().y < -100 || this.title.getBoundingClientRect().y > window.outerHeight + 30) { // no more visibile on screen
+    } else if (this.title.getBoundingClientRect().y < -100 || this.title.getBoundingClientRect().y > window.outerHeight - 100) { // no more visibile on screen
       this.title.style.animation = ""
     }
   }

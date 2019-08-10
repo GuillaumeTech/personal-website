@@ -86,7 +86,7 @@ class Graphic extends Component {
     if (this.title.getBoundingClientRect().y < 150 && this.title.getBoundingClientRect().y > 30) {
       this.title.style.animationPlayState = "running"
       setTimeout(() => this.title.style.animation = "none", 500)
-    } else if (this.title.getBoundingClientRect().y < -100 || this.title.getBoundingClientRect().y > window.outerHeight + 30) {
+    } else if (this.title.getBoundingClientRect().y < -100 || this.title.getBoundingClientRect().y > window.outerHeight - 100) {
       this.title.style.animation = ""
     }
   }
