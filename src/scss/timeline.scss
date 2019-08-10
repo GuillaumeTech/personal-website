@@ -30,6 +30,7 @@
     -moz-box-pack: justify;
     justify-content: space-between;
     clear: both;
+    padding-bottom: 2rem;
  }
 
  .timeline-block-right {
@@ -43,7 +44,7 @@
     border: 5px solid $black;
     background: $light;
     margin-top: 10px;
-    z-index: 9999
+    z-index: 50
  }
 
  .timeline-content {
