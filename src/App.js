@@ -52,7 +52,7 @@ const SmoothScroll = () => (
                       </AnchorLink>
                     </SubTitle>
 
-                    <img
+              {/*<img
                       src={process.env.PUBLIC_URL + "/personal.svg"}
                       alt="personal logo"
                       style={{
@@ -60,7 +60,7 @@ const SmoothScroll = () => (
                         width: "auto",
                         height: "70px"
                       }}
-                    />
+              />*/}
                   </Center>
                 
             </div>
