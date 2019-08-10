@@ -70,16 +70,6 @@ export const Link = styled.a`
   color: ${props => props.theme.black};
 `;
 
-export const IntroLink = styled(Link)`
-border-bottom-style: solid;
-border-bottomwidth: 0.3rem;
-font-family: "Source Sans Pro", sans-serif;
-font-weight: 600;
-  &:hover {
-    color: ${props => props.theme.light};
-  }
-`;
-
 export const Title = styled.h1`
   font-size: 2.5rem;
   color: ${props => props.theme.black};
