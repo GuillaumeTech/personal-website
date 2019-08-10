@@ -15,6 +15,8 @@ import Graphic from "./components/Graphic"
 import Soft from "./components/Soft"
 import Footer from "./components/Footer"
 import MenuBar from "./components/MenuBar"
+import Projects from "./components/Projects"
+
 
 
 const SmoothScroll = () => (
@@ -68,6 +70,7 @@ const SmoothScroll = () => (
       </section>
       <Soft />
       <Graphic />
+      <Projects />
       <Contact />
       <Footer />
 
