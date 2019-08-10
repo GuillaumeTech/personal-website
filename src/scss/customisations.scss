@@ -1,10 +1,11 @@
 $primary: rgb(255, 163, 110);
 $black : rgb(13, 3, 29);
-$light: hsl(180, 1%, 92%);
+$grey-darker:$black;
+$light: hsl(200, 5%, 95%);
 $orange:  rgb(255, 208, 146);
 $primary_gradient: linear-gradient(60deg,$primary,$orange);
 
-$family-primary: 'Lato';
+$family-primary: 'Open Sans';
 
 
 $text:$black;
