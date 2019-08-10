@@ -3,7 +3,6 @@ import {
   Title,
   Center,
   Link,
-  Top,
   SubTitle,
 
 } from "./components/CssComponents.js";
@@ -16,16 +15,17 @@ import Contact from "./components/Contact"
 import Graphic from "./components/Graphic"
 import Soft from "./components/Soft"
 import Footer from "./components/Footer"
+import MenuBar from "./components/MenuBar"
+
 
 const SmoothScroll = () => (
-  <ParallaxProvider>
     <ThemeProvider theme={theme}>
       <body className="has-background-light">
         
         <section className="hero is-fullheight">
           <div className="hero-body">
             <div className="container">
-              
+            <MenuBar />
                   <Title>Hi, I'm Guillaume</Title>
                   <Center>
                     <SubTitle>
@@ -71,26 +71,7 @@ const SmoothScroll = () => (
         <Graphic />
         <Contact />
         <Footer />
-        <Top className="container" > <AnchorLink offset="80" href="#engineer">
-          <Link className="underline">
-            Engineer
-                    </Link>
-        </AnchorLink>
-          |
-          <AnchorLink offset="80" href="#graphic">
-            <Link className="underline">
-              Graphic design
-                    </Link>
-          </AnchorLink> |
-          <AnchorLink offset="80" href="#projects">
-            <Link className="underline">
-              Projects
-                    </Link>
-          </AnchorLink>  | <AnchorLink offset="80" href="#contact">
-            <Link className="underline">
-              Contact
-                    </Link>
-          </AnchorLink> </Top>
+
       </body>
     
     </ThemeProvider>
