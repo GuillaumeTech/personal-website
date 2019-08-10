@@ -6,7 +6,6 @@ import {
   Input,
   TextArea
 } from "./CssComponents";
-import { Parallax } from "react-scroll-parallax";
 
 class Contact extends Component {
  

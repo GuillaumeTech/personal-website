@@ -7,7 +7,6 @@ import {
 
 } from "./components/CssComponents.js";
 import AnchorLink from "react-anchor-link-smooth-scroll";
-import { ParallaxProvider } from "react-scroll-parallax";
 
 import theme from "./theme";
 import { ThemeProvider } from "styled-components";
@@ -75,7 +74,6 @@ const SmoothScroll = () => (
       </body>
     
     </ThemeProvider>
-  </ParallaxProvider>
 );
 
 class App extends Component {

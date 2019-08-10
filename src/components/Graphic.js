@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Masonry from "react-image-masonry";
 import Img from "react-image";
-import { Parallax } from "react-scroll-parallax";
 import { SectionIntro, SectionTitle, Link } from "./CssComponents.js";
 
 class Graphic extends Component {
