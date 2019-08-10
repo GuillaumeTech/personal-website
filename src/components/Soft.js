@@ -9,25 +9,48 @@ import {
 } from "./CssComponents.js";
 
 class Soft extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { opacity: 0 };
+    this.handleScroll = this.handleScroll.bind(this)
+    this.title = null
+    this.titleRef = element => {
+      this.title = element;
+    };
+  }
+
+  componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll);
+  }
+
+  handleScroll() {
+    if (this.title.getBoundingClientRect().y < 150 && this.title.getBoundingClientRect().y > 70) { // on top of the screen
+      this.title.style.animationPlayState = "running"
+      setTimeout(() => this.title.style.animation = "none", 500)
+    } else if (this.title.getBoundingClientRect().y < -100 || this.title.getBoundingClientRect().y > window.outerHeight + 30) { // no more visibile on screen
+      this.title.style.animation = ""
+    }
+  }
+
+
+
   render() {
     return (
       <section className="section">
         <div className="container">
-          <SectionTitle id="engineer">Software engineer</SectionTitle>
-            <div className="rectangle" />
-
+          <SectionTitle id="engineer" ref={this.titleRef}>Software engineer</SectionTitle>
           <div className="columns is-vcentered">
             <div className="column">
               <SectionIntro>
                 <br />
                 I'm someone curious that is motivated by the idea of learning
                   new things and putting them into practice. <br />I’m interested in
-                  web development and design.
+web development and design.
                 <br />
                 <br />
                 You can find my full resume{" "}
                 <Link
-                    className="underline"
+                  className="underline"
                   href={process.env.PUBLIC_URL + "resume_GuillaumeTECHER.pdf"}
                 >
                   here

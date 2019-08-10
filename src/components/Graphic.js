@@ -70,14 +70,32 @@ class Graphic extends Component {
         }
       ]
     };
+    this.handleScroll = this.handleScroll.bind(this)
+    this.title = null
+
+    this.titleRef = element => {
+      this.title = element;
+    };
+  }
+
+  componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll);
+  }
+
+  handleScroll() {
+    if (this.title.getBoundingClientRect().y < 150 && this.title.getBoundingClientRect().y > 30) {
+      this.title.style.animationPlayState = "running"
+      setTimeout(() => this.title.style.animation = "none", 500)
+    } else if (this.title.getBoundingClientRect().y < -100 || this.title.getBoundingClientRect().y > window.outerHeight + 30) {
+      this.title.style.animation = ""
+    }
   }
 
   render() {
     return (
       <section className="section">
         <div className="container">
-          <SectionTitle id="graphic">Graphic design </SectionTitle>
-            <div className="rectangle" />
+          <SectionTitle ref={this.titleRef} id="graphic">Graphic design </SectionTitle>
 
           <SectionIntro>
             I do graphic design, photography and some 3D on my free time, I was
@@ -90,7 +108,7 @@ class Graphic extends Component {
               Unsplash
             </Link>
             ,{"\u00A0"}
-             you can also follow me on{" "}
+            you can also follow me on{" "}
             <Link
               className="underline"
               href="https://www.instagram.com/guillaume_tech/"

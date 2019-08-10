@@ -1,4 +1,16 @@
 import styled from "styled-components";
+import { keyframes } from "styled-components";
+
+
+const slidein = keyframes`
+  from {
+    background-size: 100% 0%;
+  }
+
+  to {
+    background-size: 100% 1.5rem;
+  }
+`;
 
 
 export const MenuContents = styled.div`
@@ -69,14 +81,14 @@ font-weight: 600;
 `;
 
 export const Title = styled.h1`
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: ${props => props.theme.black};
   text-align: left;
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 900;
+  padding:0.2rem;
   animation: tracking-in-contract 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) both;
   animation-delay: 0.1s;
-  white-space: nowrap;
 `;
 
 export const Date = styled.p`
@@ -106,23 +118,31 @@ export const Center = styled.div`
 export const SubTitle = styled.div`
   font-size: 2rem;
   font-family: "Source Sans Pro", sans-serif;
-  font-weight: 600;
+  font-weight: 400;
   color: ${props => props.theme.black};
 `;
 
-export const SectionIntro = styled.p`
+export const SectionIntro = styled.div`
 text-align: left;
   text-left: inter-word;
   font-size: 1.4rem;
   align-items: center;
   padding-top: 2rem;
   padding-bottom: 2rem;
+  line-height: 2.3rem;
   color: ${props => props.theme.black};
 `;
 
 export const SectionTitle = styled.div`
+  background-image: ${props => props.theme.primary_gradient};
+  background-repeat: no-repeat;
+  background-size: 100% 1.5rem;
+  background-position: 0% 100%;
+  padding-bottom: 1.5rem;
   font-size: 2.5rem;
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 900;
+  animation: ${slidein} 0.3s ease-out 1;
+  animation-play-state: paused;
   color: ${props => props.theme.black};
 `;

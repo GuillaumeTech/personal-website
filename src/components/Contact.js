@@ -8,14 +8,34 @@ import {
 } from "./CssComponents";
 
 class Contact extends Component {
- 
+  constructor(props) {
+    super(props);
+    this.handleScroll = this.handleScroll.bind(this)
+    this.title = null
+    this.titleRef = element => {
+      this.title = element;
+    };
+  }
+
+  componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll);
+  }
+
+  handleScroll() {
+    if (this.title.getBoundingClientRect().y < 150 && this.title.getBoundingClientRect().y > 70) { // on top of the screen
+      this.title.style.animationPlayState = "running"
+      setTimeout(() => this.title.style.animation = "none", 500)
+    } else if (this.title.getBoundingClientRect().y < -100 || this.title.getBoundingClientRect().y > window.outerHeight + 30) { // no more visibile on screen
+      this.title.style.animation = ""
+    }
+  }
+
 
   render() {
     return (
       <section className="section">
         <div className="container">
-          <SectionTitle id="contact">Contact</SectionTitle>
-            <div className="rectangle" />
+          <SectionTitle ref={this.titleRef} id="contact">Contact</SectionTitle>
 
           <SectionIntro>
             You want to work with me, use one of my posters or just want to chat
@@ -40,26 +60,26 @@ class Contact extends Component {
                       <Input placeholder="Your name" />
                     </div>
                   </div>
-                  </div>
+                </div>
 
-                  <div className="column is-half">
-                    <div className="field">
-                      <label className="label is-size-5">E-Mail</label>
-                      <div className="control">
-                        <Input placeholder="Your e-mail" />
-                      </div>
+                <div className="column is-half">
+                  <div className="field">
+                    <label className="label is-size-5">E-Mail</label>
+                    <div className="control">
+                      <Input placeholder="Your e-mail" />
                     </div>
                   </div>
+                </div>
               </div>
               <div className="field">
-                      <label className="label is-size-5">Message</label>
-                      <div className="control">
-              <TextArea placeholder="Say what you want ! " />
+                <label className="label is-size-5">Message</label>
+                <div className="control">
+                  <TextArea placeholder="Say what you want ! " />
+                </div>
               </div>
-                    </div>
-                    <div className="control">
-    <button className="button is-primary is-medium">Submit</button>
-  </div>
+              <div className="control">
+                <button className="button is-primary is-medium">Submit</button>
+              </div>
             </form>
           </SectionIntro>
         </div>
