@@ -15,7 +15,7 @@ class Projects extends Component {
         this.state = {
             projects: [{
                 content: <div> A todo application that was built to learn React - <i>Finished</i>  <br /><br /><Link className="underline"
-                    href="https://www.instagram.com/guillaume_tech/">Demo</Link> | <Link className="underline"
+                    href="https://todo.gtecher.fr">Demo</Link> | <Link className="underline"
                         href="https://github.com/GuillaumeTech/supertodo">Code</Link></div>,
                 name: 'Super todo'
             },
